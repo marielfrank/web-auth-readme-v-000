@@ -1,1 +1,7 @@
-
+<% if @friends.size > 0 %>
+    <% @friends.each do |friend| %>
+        <h3><%= friend['firstName'] %> <%= friend['lastName'] %></h3>
+    <% end %>
+<% else %>
+    <p>Looks like you don't have any foursquare friends yet.</p>
+<% end %>
